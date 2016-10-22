@@ -5,7 +5,6 @@ using System.Collections;
 public class Coin_Dropper : MonoBehaviour {
 
     public bool Dropping = false, Dropped = false;
-    float currentTime, previousTime = 0, deltaTime = 0, timer = 20;
     public GameObject Coin;
     public float minX, maxX;
     bool right = false;
