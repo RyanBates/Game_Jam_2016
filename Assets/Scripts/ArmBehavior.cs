@@ -32,64 +32,45 @@ public class ArmBehavior : MonoBehaviour {
         Vector3 direction = Vector3.zero;
         Quaternion rotation = new Quaternion(0,0,0,0);
 
-        if (Input.GetKey(KeyCode.W) && transform.position.z < Radius + PlayerBody.transform.position.z)
+        if (Input.GetAxis("Vertical") > 0 && transform.position.z < Radius + PlayerBody.transform.position.z)
         {
             wkey = true;
         }
 
-        if (Input.GetKey(KeyCode.S) && transform.position.z > -Radius + PlayerBody.transform.position.z )
+        if (Input.GetAxis("Vertical") < 0 && transform.position.z > -Radius + PlayerBody.transform.position.z )
         {
             skey = true;
         }
-        if (Input.GetKey(KeyCode.Q) && transform.position.y < Radius + PlayerBody.transform.position.y)
+        if (Input.GetAxis("UP") > 0 && transform.position.y < Radius + PlayerBody.transform.position.y)
         {
             qkey = true;
         }
-        if (Input.GetKey(KeyCode.E) && transform.position.y > -Radius + PlayerBody.transform.position.y)
+        if (Input.GetAxis("UP") < 0 && transform.position.y > -Radius + PlayerBody.transform.position.y)
         {
             ekey = true;
         }
 
-        if (Input.GetKey(KeyCode.D) && transform.position.x < Radius + PlayerBody.transform.position.x)
+        if (Input.GetAxis("Horizontal") > 0 && transform.position.x < Radius + PlayerBody.transform.position.x)
         {
             dkey = true;
         }
 
-        if (Input.GetKey(KeyCode.A) && transform.position.x > -Radius + PlayerBody.transform.position.x)
+        if (Input.GetAxis("Horizontal") < 0 && transform.position.x > -Radius + PlayerBody.transform.position.x-6)
         {
             akey = true;
         }
-        if (wkey == true)
+        if (wkey == true || skey == true)
         {
-            direction += Vector3.forward;
-            
+            direction += Vector3.forward * (Input.GetAxis("Vertical") * speed) * Time.deltaTime;
+        }
+        if (qkey == true || ekey == true)
+        {
+            direction += Vector3.up * ((Input.GetAxis("UP") * -speed) * Time.deltaTime);
+        }
 
-        }
-        if (skey == true)
+        if (dkey == true || akey == true)
         {
-            direction += Vector3.back;
-            
-        }
-        if (qkey == true)
-        {
-            direction += Vector3.up;
-            
-        }
-        if (ekey == true)
-        {
-            direction += Vector3.down;
-            
-        }
-        if (dkey == true)
-        {
-            direction += Vector3.right;
-            
-        }
-        if (akey == true)
-        {
-            direction += Vector3.left;
-            
-
+            direction += Vector3.right * (Input.GetAxis("Horizontal") * speed) * Time.deltaTime;
         }
         transform.position += direction * speed * Time.deltaTime;
         
