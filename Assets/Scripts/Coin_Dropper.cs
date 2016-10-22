@@ -5,21 +5,20 @@ using System.Collections;
 public class Coin_Dropper : MonoBehaviour {
 
     public bool Dropping = false, Dropped = false;
-    float currentTime, previousTime = 0, deltaTime = 0, timer = 20;
+    float currentTime, previousTime = 0, deltaTime = 0, timer = 10;
     public GameObject Coin;
     public float minX, maxX;
     bool right = false;
 
 	// Use this for initialization
 	void Start () {
-        Dropping = false;
-        Dropped = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Dropping)
         {
+            Debug.Log("boop");
             currentTime = Time.time;
             deltaTime = currentTime - previousTime;
 
