@@ -39,20 +39,20 @@ public class ArmBehavior : MonoBehaviour {
             wkey = true;
         }
 
-        if (Input.GetKey(KeyCode.S) && transform.position.z > -Radius + PlayerBody.transform.position.z)
+        if (Input.GetKey(KeyCode.S) && transform.position.z > -Radius + PlayerBody.transform.position.z )
         {
             skey = true;
         }
-        if (Input.GetKey(KeyCode.Q) && transform.position.y < Radius + PlayerBody.transform.position.y)
+        if (Input.GetKey(KeyCode.Q) && transform.position.y < Radius + PlayerBody.transform.position.y + 5)
         {
             qkey = true;
         }
-        if (Input.GetKey(KeyCode.E) && transform.position.y > -Radius + PlayerBody.transform.position.y)
+        if (Input.GetKey(KeyCode.E) && transform.position.y > -Radius + PlayerBody.transform.position.y + 5)
         {
             ekey = true;
         }
 
-        if (Input.GetKey(KeyCode.D) && transform.position.x < Radius + PlayerBody.transform.position.x)
+        if (Input.GetKey(KeyCode.D) && transform.position.x < Radius + PlayerBody.transform.position.x - 2)
         {
             dkey = true;
         }
@@ -63,27 +63,27 @@ public class ArmBehavior : MonoBehaviour {
         }
         if (wkey == true)
         {
-            direction += new Vector3(0, 0, 1);
+            direction += Vector3.forward;
         }
         if (skey == true)
         {
-            direction += new Vector3(0, 0, -1);
+            direction += Vector3.back;
         }
         if (qkey == true)
         {
-            direction += new Vector3(0, 1, 0);
+            direction += Vector3.up;
         }
         if (ekey == true)
         {
-            direction += new Vector3(0, -1, 0);
+            direction += Vector3.down;
         }
         if (dkey == true)
         {
-            direction += new Vector3(1, 0, 0);
+            direction += Vector3.right;
         }
         if (akey == true)
         {
-            direction += new Vector3(-1, 0, 0);
+            direction += Vector3.left;
         }
         transform.position += direction * speed * Time.deltaTime;
         //if (Displacement.x >= Radius )
