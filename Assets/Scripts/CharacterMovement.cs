@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterMovement : MonoBehaviour
 {
-    float currentTime = Time.time;
+    float currentTime = 0;
     float previousTime = 0;
     float deltaTime = 0;
 
