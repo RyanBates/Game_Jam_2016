@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ArmBehavior : MonoBehaviour {
 
-    private float Radius = 3;
+    private float Radius = 1;
     public Vector3 Displacement;
     float speed = 20.0f;
     bool wkey = false;
@@ -30,6 +30,7 @@ public class ArmBehavior : MonoBehaviour {
         akey = false;
 
         Vector3 direction = Vector3.zero;
+        Quaternion rotation = new Quaternion(0,0,0,0);
 
         if (Input.GetKey(KeyCode.W) && transform.position.z < Radius + PlayerBody.transform.position.z)
         {
@@ -40,16 +41,16 @@ public class ArmBehavior : MonoBehaviour {
         {
             skey = true;
         }
-        if (Input.GetKey(KeyCode.Q) && transform.position.y < Radius + PlayerBody.transform.position.y + 5)
+        if (Input.GetKey(KeyCode.Q) && transform.position.y < Radius + PlayerBody.transform.position.y)
         {
             qkey = true;
         }
-        if (Input.GetKey(KeyCode.E) && transform.position.y > -Radius + PlayerBody.transform.position.y + 5)
+        if (Input.GetKey(KeyCode.E) && transform.position.y > -Radius + PlayerBody.transform.position.y)
         {
             ekey = true;
         }
 
-        if (Input.GetKey(KeyCode.D) && transform.position.x < Radius + PlayerBody.transform.position.x - 2)
+        if (Input.GetKey(KeyCode.D) && transform.position.x < Radius + PlayerBody.transform.position.x)
         {
             dkey = true;
         }
@@ -61,28 +62,37 @@ public class ArmBehavior : MonoBehaviour {
         if (wkey == true)
         {
             direction += Vector3.forward;
+            
+
         }
         if (skey == true)
         {
             direction += Vector3.back;
+            
         }
         if (qkey == true)
         {
             direction += Vector3.up;
+            
         }
         if (ekey == true)
         {
             direction += Vector3.down;
+            
         }
         if (dkey == true)
         {
             direction += Vector3.right;
+            
         }
         if (akey == true)
         {
             direction += Vector3.left;
+            
+
         }
         transform.position += direction * speed * Time.deltaTime;
+        
         //if (Displacement.x >= Radius )
         //{
         //    gameObject.transform.position = new Vector3(PlayerBody.transform.position.x + Displacement.x, PlayerBody.transform.position.y, PlayerBody.transform.position.z);
