@@ -10,11 +10,11 @@ public class Dropper_Master : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        for (int I = 0; I < 5; I++)
+        for (int I = 0; I < 9; I++)
         {
-            GameObject dropper = (GameObject)Instantiate(Dropper, new Vector3(0, 20, -10 + (I * 5)),Quaternion.identity);
-            dropper.GetComponent<Coin_Dropper>().minX = -10;
-            dropper.GetComponent<Coin_Dropper>().maxX = 10;
+            GameObject dropper = (GameObject)Instantiate(Dropper, new Vector3(0, 20, -20 + (I * 5)),Quaternion.identity);
+            dropper.GetComponent<Coin_Dropper>().minX = -20;
+            dropper.GetComponent<Coin_Dropper>().maxX = 20;
             if (I == 0)
             {
                 dropper.GetComponent<Coin_Dropper>().Dropping = true;
