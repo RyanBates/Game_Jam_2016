@@ -5,10 +5,7 @@ public class ArmBehavior : MonoBehaviour {
 
     private float Radius = 3;
     public Vector3 Displacement;
-    public Vector3 Displacement2;
     float speed = 20.0f;
-    float zPositionLock;
-    float xPositionLock;
     bool wkey = false;
     bool skey = false;
     bool qkey = false;
