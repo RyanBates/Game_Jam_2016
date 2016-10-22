@@ -15,11 +15,17 @@ public class Dropper_Master : MonoBehaviour {
             GameObject dropper = (GameObject)Instantiate(Dropper, new Vector3(0, 20, -10 + (I * 5)),Quaternion.identity);
             dropper.GetComponent<Coin_Dropper>().minX = -10;
             dropper.GetComponent<Coin_Dropper>().maxX = 10;
-            dropper.GetComponent<Coin_Dropper>().Dropping = false;
-            //Droppers.Add(dropper);
+            if (I == 0)
+            {
+                dropper.GetComponent<Coin_Dropper>().Dropping = true;
+            }
+            else
+            {
+                dropper.GetComponent<Coin_Dropper>().Dropping = false;
+            }
+            dropper.GetComponent<Coin_Dropper>().Dropped = false;
         }
         Droppers = UpdateDropperList();
-        Droppers[0].GetComponent<Coin_Dropper>().Dropping = true;
         Debug.Log(Droppers[0].name);
 	}
 	
@@ -63,9 +69,9 @@ public class Dropper_Master : MonoBehaviour {
         List<GameObject> Update = new List<GameObject>();
         foreach(GameObject gO in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
         {
-            if(gO.name == "Coin Dropper(Clone)")
+            //Debug.Log(gO.name);
+            if (gO.name == "Coin Dropper(Clone)")
             {
-                Debug.Log(gO.name);
                 Update.Add(gO);
             }
         }
