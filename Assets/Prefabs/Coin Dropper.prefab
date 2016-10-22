@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dropping: 1
   Dropped: 0
-  Coin: {fileID: 1000011394316668, guid: 7d0f39e3ae74c954bbe98a9927c23446, type: 2}
+  Coin: {fileID: 1000012419293872, guid: 7d0f39e3ae74c954bbe98a9927c23446, type: 2}
   minX: 0
   maxX: 0
