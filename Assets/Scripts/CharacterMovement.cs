@@ -6,7 +6,7 @@ using System;
 public class CharacterMovement : MonoBehaviour
 {
 
-    public AudioSource j;
+    public AudioSource sound;
 
 
     public GameObject map;
@@ -22,7 +22,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Awake()
     {
-        j = gameObject.GetComponent<AudioSource>();
+        sound = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -54,8 +54,8 @@ public class CharacterMovement : MonoBehaviour
         else
             if (Input.GetKeyDown(KeyCode.Space))
             {
-            Jump += jumpforce * deltaTime;
-            j.Play();
+                Jump += jumpforce * deltaTime;
+                sound.Play();
             }
 
         Vector3 name = new Vector3(0, Jump, 0);
