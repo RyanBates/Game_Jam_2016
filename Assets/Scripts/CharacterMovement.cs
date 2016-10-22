@@ -9,13 +9,12 @@ public class CharacterMovement : MonoBehaviour
     float deltaTime = 0;
 
     float Jump;
-    float jumpforce = 15;
+    float jumpforce = 25000;
     //float gravity = 14;
     public bool grounded = true;
 
     void Update()
     {
-
         currentTime = Time.time;
         deltaTime = currentTime - previousTime;
         previousTime = currentTime;
@@ -30,14 +29,14 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             gameObject.transform.position += new Vector3(5, 0, 0) * deltaTime;
 
-        if (transform.position.y - .5f >= map.transform.position.y)
+        if (transform.position.y - 1 >= map.transform.position.y)
             grounded = false;
 
         else
             grounded = true;
 
         if (!grounded)
-            Jump -= jumpforce;
+            Jump /= (jumpforce * deltaTime) * 2;
       
         
         else
