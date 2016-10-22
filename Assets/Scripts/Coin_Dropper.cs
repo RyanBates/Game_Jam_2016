@@ -12,14 +12,13 @@ public class Coin_Dropper : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Dropping = false;
-        Dropped = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Dropping)
         {
+            Debug.Log("boop");
             currentTime = Time.time;
             deltaTime = currentTime - previousTime;
 
