@@ -18,7 +18,6 @@ public class Coin_Dropper : MonoBehaviour {
 	void Update () {
         if (Dropping)
         {
-            Debug.Log("boop");
             currentTime = Time.time;
             deltaTime = currentTime - previousTime;
 
