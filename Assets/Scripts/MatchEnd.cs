@@ -17,7 +17,7 @@ public class MatchEnd : MonoBehaviour {
                 MatchData = gO;
             }
         }
-        for(int i = 0; i < MatchData.GetComponent<MatchSettings>().Players; i++)
+        for(int i = 0; i < 4; i++)
         {
             if(i + 1 > MatchData.GetComponent<MatchSettings>().Players)
             {
