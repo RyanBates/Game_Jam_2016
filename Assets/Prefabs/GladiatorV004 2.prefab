@@ -944,14 +944,14 @@ HingeJoint:
   m_GameObject: {fileID: 1000012182518654}
   m_ConnectedBody: {fileID: 54000012056006690}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.08988454, y: 0.0017398904, z: -9.313226e-10}
-  m_UseSpring: 1
+  m_UseSpring: 0
   m_Spring:
     spring: 11.6
     damper: 0
-    targetPosition: 9.91
+    targetPosition: 5.66
   m_UseMotor: 0
   m_Motor:
     targetVelocity: 0
@@ -959,14 +959,14 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -90
-    max: 45
-    bounciness: 0.82
+    min: -50
+    max: 69.09
+    bounciness: 0
     bounceMinVelocity: 2
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
 --- !u!59 &59000013963422318
 HingeJoint:
@@ -1058,6 +1058,7 @@ MonoBehaviour:
   speed: 10
   jumpforce: 25000
   grounded: 1
+  Coins: 0
 --- !u!135 &135000012740168966
 SphereCollider:
   m_ObjectHideFlags: 1
