@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class MatchSettings : MonoBehaviour {
@@ -10,8 +10,14 @@ public class MatchSettings : MonoBehaviour {
     public float Players;
     public float Seconds;
     public float Coins;
-	// Use this for initialization
-	void Start () {
+    public List<float> PlayerCoins;
+    float Player1Coins;
+    float Player2Coins;
+    float Player3Coins;
+    float Player4Coins;
+    
+    // Use this for initialization
+    void Start () {
         foreach(Text texts in FindObjectsOfType<Text>())
         {
             if(texts.transform.gameObject.name == "SecondsText")
@@ -28,7 +34,12 @@ public class MatchSettings : MonoBehaviour {
             }
         }
         PlayerAmount = FindObjectOfType<Slider>();
-	}
+        Players = 1;
+        PlayerCoins.Add(Player1Coins);
+        PlayerCoins.Add(Player2Coins);
+        PlayerCoins.Add(Player3Coins);
+        PlayerCoins.Add(Player4Coins);
+    }
 	
 	// Update is called once per frame
 	void Update () {
