@@ -1058,6 +1058,7 @@ MonoBehaviour:
   speed: 10
   jumpforce: 25000
   grounded: 1
+  Coins: 0
 --- !u!135 &135000013657520972
 SphereCollider:
   m_ObjectHideFlags: 1
