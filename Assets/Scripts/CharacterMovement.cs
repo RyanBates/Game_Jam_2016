@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     float currentTime = 0;
     float previousTime = 0;
     float deltaTime = 0;
-
+    public float speed;
     Vector3 dir;
     float Jump;
     public float jumpforce = 25000;
@@ -40,12 +40,12 @@ public class CharacterMovement : MonoBehaviour
         dir += (new Vector3(h, 0, v) / 25);
         Vector3 pos = transform.position;
 
+        //int biggestnum = (a > b) ? a : b;
+        Vector3 vel = (pos - transform.position) * Time.deltaTime;
 
-        Vector3 vel = (pos - transform.position) * deltaTime;
 
-
-
-        transform.position += dir * Time.deltaTime;
+        
+        transform.position += Vector3.ClampMagnitude(((dir + vel) * speed * Time.deltaTime),0.4f);
 
 
         if (transform.position.y - 1 >= map.transform.position.y)
@@ -55,7 +55,7 @@ public class CharacterMovement : MonoBehaviour
             grounded = true;
         
         if (!grounded)
-            Jump /= (jumpforce * deltaTime) * 2;
+            Jump /= (jumpforce * deltaTime) * 10;
 
 
         else
