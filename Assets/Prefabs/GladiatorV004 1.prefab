@@ -1053,11 +1053,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38378f8fee1896947bad01b7b64db8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
+  cSound: {fileID: 0}
+  hSound: {fileID: 0}
+  flySound: {fileID: 0}
+  Coin: {fileID: 0}
   map: {fileID: 100000, guid: 0c490de3c29673a419b8923eb2fa0f88, type: 3}
+  player: 0
   speed: 10
-  jumpforce: 25000
-  grounded: 1
   Coins: 0
 --- !u!135 &135000013252337550
 SphereCollider:

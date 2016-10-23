@@ -13,7 +13,9 @@ public class CharacterMovement : MonoBehaviour
     public GameObject map;
 
     bool isFly = false;
-    
+
+    public int player;
+
     float currentTime = 0;
     float previousTime = 0;
     float deltaTime = 0;
@@ -57,15 +59,50 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
-    
+    void Start()
+    {
+        if (player == 0)
+        {
+            h = Input.GetAxis("MoveX");
+            v = Input.GetAxis("MoveZ");
+        }
+        if (player == 1)
+        {
+            h = Input.GetAxis("MoveX2");
+            v = Input.GetAxis("MoveZ2");
+        }
+        if (player == 2)
+        {
+            h = Input.GetAxis("MoveX3");
+            v = Input.GetAxis("MoveZ3");
+        }
+        if (player == 3)
+        {
+            h = Input.GetAxis("MoveX4");
+            v = Input.GetAxis("MoveZ4");
+        }
+
+    }
 
 void Update()
     {
 
 
         dir = Vector3.zero;
-        h = Input.GetAxis("MoveX");
-        v = Input.GetAxis("MoveZ");
+
+
+            h = Input.GetAxis("MoveX");
+            v = Input.GetAxis("MoveZ");
+
+            h = Input.GetAxis("MoveX2");
+            v = Input.GetAxis("MoveZ2");
+
+            h = Input.GetAxis("MoveX3");
+            v = Input.GetAxis("MoveZ3");
+
+            h = Input.GetAxis("MoveX4");
+            v = Input.GetAxis("MoveZ4");
+        
 
 
         dir += (new Vector3(h, 0, v) * 2);
