@@ -1045,6 +1045,7 @@ MonoBehaviour:
   speed: 10
   jumpforce: 25000
   grounded: 1
+  Coins: 0
 --- !u!114 &114000010856765680
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -669,51 +669,6 @@ Prefab:
       propertyPath: m_Name
       value: Blue
       objectReference: {fileID: 0}
-    - target: {fileID: 59000013281686308, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_UseSpring
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013281686308, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_Spring.spring
-      value: 2.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013281686308, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_Spring.damper
-      value: 2.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013281686308, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_Spring.targetPosition
-      value: 4.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013281686308, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_UseMotor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013917375862, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_Spring.targetPosition
-      value: -55.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013917375862, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_UseSpring
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013917375862, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_Limits.min
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000013917375862, guid: 65c2942dd0e46fa49a7c68aa2b55191d,
-        type: 2}
-      propertyPath: m_Limits.max
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65c2942dd0e46fa49a7c68aa2b55191d, type: 2}
   m_IsPrefabParent: 0
