@@ -112,6 +112,7 @@ public class MatchScript : MonoBehaviour {
                 Debug.Log("Works");
             }
             CheckTime();
+            CheckCoins();
         }
     }
 
@@ -122,6 +123,20 @@ public class MatchScript : MonoBehaviour {
             if (MatchData.GetComponent<MatchSettings>().Seconds != 666)
             {
                 SceneManager.LoadScene("MatchOver");
+            }
+        }
+    }
+
+    void CheckCoins()
+    {
+        if(MatchData.GetComponent<MatchSettings>().Coins != 666)
+        {
+            for(int i = 0; i < MatchData.GetComponent<MatchSettings>().Players; i++)
+            {
+                if(Players[i].GetComponent<CharacterMovement>().Coins >= MatchData.GetComponent<MatchSettings>().Coins)
+                {
+                    SceneManager.LoadScene("MatchOver");
+                }
             }
         }
     }
