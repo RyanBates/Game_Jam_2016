@@ -8,16 +8,14 @@ public class CharacterMovement : MonoBehaviour
 
     public AudioSource sound;
 
-
     public GameObject map;
     float currentTime = 0;
     float previousTime = 0;
     float deltaTime = 0;
 
-    
+    Vector3 dir;
     float Jump;
-    float jumpforce = 25;
-    //float gravity = 14;
+    public float jumpforce = 25000;
     public bool grounded = true;
 
     void Awake()
@@ -25,28 +23,37 @@ public class CharacterMovement : MonoBehaviour
         sound = gameObject.GetComponent<AudioSource>();
     }
 
+    float h;
+    float v;
+
     void Update()
     {
+
+        
         currentTime = Time.time;
         deltaTime = currentTime - previousTime;
         previousTime = currentTime;
-        
 
-        if (Input.GetKey(KeyCode.W))
-            gameObject.transform.position += new Vector3(0, 0, 5) * deltaTime;
-        if (Input.GetKey(KeyCode.A))
-            gameObject.transform.position += new Vector3(-5, 0, 0) * deltaTime;
-        if (Input.GetKey(KeyCode.S))
-            gameObject.transform.position += new Vector3(0, 0, -5) * deltaTime;
-        if (Input.GetKey(KeyCode.D))
-            gameObject.transform.position += new Vector3(5, 0, 0) * deltaTime;
+         h = Input.GetAxis("MoveX");
+         v = Input.GetAxis("MoveZ");
+
+        dir += (new Vector3(h, 0, v) / 25);
+        Vector3 pos = transform.position;
+
+
+        Vector3 vel = (pos - transform.position) * deltaTime;
+
+
+
+        transform.position += dir * Time.deltaTime;
+
 
         if (transform.position.y - 1 >= map.transform.position.y)
             grounded = false;
 
         else
             grounded = true;
-
+        
         if (!grounded)
             Jump /= (jumpforce * deltaTime) * 2;
 
