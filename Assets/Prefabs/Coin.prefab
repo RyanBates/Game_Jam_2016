@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011251277256}
   - 54: {fileID: 54000013331978362}
+  - 135: {fileID: 135000013571222506}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -135,3 +136,15 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 9ef1d75de764a2e439a18acdf915a816, type: 3}
+--- !u!135 &135000013571222506
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012419293872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

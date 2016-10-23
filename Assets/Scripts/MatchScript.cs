@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class MatchScript : MonoBehaviour {
+    bool Paused;
+    public GameObject PauseScreen;
     public List<GameObject> Tags;
     GameObject Clock;
     public List<GameObject> Players;
@@ -30,84 +32,87 @@ public class MatchScript : MonoBehaviour {
             {
                 MatchData = gO;
             }
+            else if (gO.name == "MenuMusic")
+            {
+                Destroy(gO);
+            }
         }
+        PauseScreen.SetActive(false);
     }
 	
     void Start()
     {
-        //for (int i = 0; i < MatchData.GetComponent<MatchSettings>().Players; i++)
-        //{
-        //    Instantiate(Players[i]);
-        //}
-        //Players.Clear();
         Players.Add(Player1);
         Players.Add(Player2);
         Players.Add(Player3);
         Players.Add(Player4);
+        Tags.Add(Tag1);
+        Tags.Add(Tag2);
+        Tags.Add(Tag3);
+        Tags.Add(Tag4);
         for (int i = 0; i < Players.Count; i++)
         {
             if (i + 1 > MatchData.GetComponent<MatchSettings>().Players)
             {
                 Players[i].SetActive(false);
-            }
-        }
-        Tags.Add(Tag1);
-        Tags.Add(Tag2);
-        Tags.Add(Tag3);
-        Tags.Add(Tag4);
-        Debug.Log(Tags.Count);
-        for (int i = 0; i < Tags.Count; i++)
-        {
-            if (i + 1 > MatchData.GetComponent<MatchSettings>().Players)
-            {
                 Tags[i].SetActive(false);
             }
         }
+
+        Debug.Log(Tags.Count);
         time = Time.deltaTime;
     }
 
 	// Update is called once per frame
 	void Update () {
-        time += Time.deltaTime;
-        int seconds = (int)time;
-        if (seconds >= 60)
+        if (!Paused)
         {
-            int minutes = 0;
-            for (int i = 1; seconds >= 60; i++)
+            if(Input.GetButtonDown("Start"))
             {
-                seconds -= 60;
-                minutes = i;
+                Pause();
             }
-            Clock.GetComponent<Text>().text = minutes.ToString() + ":";
-            if (seconds <= 9)
+            time += Time.deltaTime;
+            int seconds = (int)time;
+            if (seconds >= 60)
             {
-                Clock.GetComponent<Text>().text += "0" + seconds.ToString();
-            }
-            else
-            {
-                Clock.GetComponent<Text>().text += seconds.ToString();
-            }
+                int minutes = 0;
+                for (int i = 1; seconds >= 60; i++)
+                {
+                    seconds -= 60;
+                    minutes = i;
+                }
+                Clock.GetComponent<Text>().text = minutes.ToString() + ":";
+                if (seconds <= 9)
+                {
+                    Clock.GetComponent<Text>().text += "0" + seconds.ToString();
+                }
+                else
+                {
+                    Clock.GetComponent<Text>().text += seconds.ToString();
+                }
 
-        }
-        else
-        {
-            Clock.GetComponent<Text>().text = "0:";
-            if (seconds <= 9)
-            {
-                Clock.GetComponent<Text>().text += "0" + seconds.ToString();
             }
             else
             {
-                Clock.GetComponent<Text>().text += seconds.ToString();
+                Clock.GetComponent<Text>().text = "0:";
+                if (seconds <= 9)
+                {
+                    Clock.GetComponent<Text>().text += "0" + seconds.ToString();
+                }
+                else
+                {
+                    Clock.GetComponent<Text>().text += seconds.ToString();
+                }
             }
+            for (int i = 0; i < MatchData.GetComponent<MatchSettings>().Players; i++)
+            {
+                Debug.Log(Tags.Count);
+                Tags[i].GetComponentInChildren<Text>().text = Players[i].GetComponent<CharacterMovement>().Coins.ToString();
+                MatchData.GetComponent<MatchSettings>().PlayerCoins[i] = Players[i].GetComponent<CharacterMovement>().Coins;
+                Debug.Log("Works");
+            }
+            CheckTime();
         }
-        for (int i = 0; i < MatchData.GetComponent<MatchSettings>().Players; i++)
-        {
-            Debug.Log(Tags.Count);
-            Tags[i].GetComponentInChildren<Text>().text = Players[i].GetComponent<CharacterMovement>().Coins.ToString();
-            Debug.Log("Works");
-        }
-        CheckTime();
     }
 
     void CheckTime()
@@ -116,10 +121,26 @@ public class MatchScript : MonoBehaviour {
         {
             if (MatchData.GetComponent<MatchSettings>().Seconds != 666)
             {
-                Destroy(MatchData);
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("MatchOver");
             }
         }
+    }
+
+    void Pause()
+    {
+        PauseScreen.SetActive(true);
+        Paused = true;
+    }
+
+    public void Resume()
+    {
+        Paused = false;
+        PauseScreen.SetActive(false);
+    }
+
+    public void QuitMatch()
+    {
+        SceneManager.LoadScene("MatchOver");
     }
 
 }
