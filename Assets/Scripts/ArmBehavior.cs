@@ -32,12 +32,12 @@ public class ArmBehavior : MonoBehaviour {
         Vector3 direction = Vector3.zero;
         Quaternion rotation = new Quaternion(0,0,0,0);
 
-        if (Input.GetAxis("Vertical") > 0 && transform.position.z < Radius + PlayerBody.transform.position.z)
+        if (Input.GetAxis("Vertical") > 0 && transform.position.z < Radius + PlayerBody.transform.position.z+2)
         {
             wkey = true;
         }
 
-        if (Input.GetAxis("Vertical") < 0 && transform.position.z > -Radius + PlayerBody.transform.position.z )
+        if (Input.GetAxis("Vertical") < 0 && transform.position.z > -Radius + PlayerBody.transform.position.z-2 )
         {
             skey = true;
         }
@@ -50,12 +50,12 @@ public class ArmBehavior : MonoBehaviour {
             ekey = true;
         }
 
-        if (Input.GetAxis("Horizontal") > 0 && transform.position.x < Radius + PlayerBody.transform.position.x)
+        if (Input.GetAxis("Horizontal") > 0 && transform.position.x < Radius + PlayerBody.transform.position.x-5)
         {
             dkey = true;
         }
 
-        if (Input.GetAxis("Horizontal") < 0 && transform.position.x > -Radius + PlayerBody.transform.position.x-6)
+        if (Input.GetAxis("Horizontal") < 0 && transform.position.x > -Radius + PlayerBody.transform.position.x-10)
         {
             akey = true;
         }
