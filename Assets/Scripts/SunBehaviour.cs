@@ -5,6 +5,6 @@ public class SunBehaviour : MonoBehaviour
 {
 	void Update ()
     {
-        transform.Rotate(.15f,0,0);
+        transform.Rotate(.05f,0,0);
 	}
 }
