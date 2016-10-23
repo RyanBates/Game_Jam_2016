@@ -12,26 +12,18 @@ public class MatchScript : MonoBehaviour {
     public float time;
 	// Use this for initialization
 	void Start () {
-        foreach(GameObject gO in FindObjectsOfType<GameObject>())
+        foreach (GameObject gO in FindObjectsOfType<GameObject>())
         {
-            if(gO.name.Contains("Player"))
-            {
-                //Tags.Add(gO);
-            }
-            else if(gO.name == "Clock")
+            if (gO.name == "Clock")
             {
                 Clock = gO;
             }
-            else if(gO.name == "MatchData")
+            else if (gO.name == "MatchData")
             {
                 MatchData = gO;
             }
         }
-        //for(int i = 0; i < MatchData.GetComponent<MatchSettings>().Players; i++)
-        //{
-        //    GameObject player = Instantiate(Gladiator, new Vector3(0, 1, 0), Quaternion.identity) as GameObject;
-        //    Players.Add(player);
-        //}
+        Tags = GetTags();
         time = Time.deltaTime;
 	}
 	
@@ -81,6 +73,29 @@ public class MatchScript : MonoBehaviour {
             Destroy(MatchData);
             SceneManager.LoadScene("Menu");
         }
+    }
+
+    List<GameObject> GetTags()
+    {
+        List<GameObject> Return = new List<GameObject>();
+        foreach(Text texts in FindObjectsOfType<Text>())
+        {
+            if(texts.gameObject.name.Contains("Players"))
+            {
+                Return.Add(texts.gameObject);
+            }
+        }
+        return Return;
+    }
+   
+    List<GameObject> GetPlayers()
+    {
+        List<GameObject> Return = new List<GameObject>();
+        foreach(CharacterMovement characters in FindObjectsOfType<CharacterMovement>())
+        {
+            Return.Add(characters.gameObject);
+        }
+        return Return;
     }
 
 }

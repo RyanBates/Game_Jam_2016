@@ -17,6 +17,7 @@ public class CharacterMovement : MonoBehaviour
     float Jump;
     public float jumpforce = 25000;
     public bool grounded = true;
+    public float Coins = 0;
 
     void Awake()
     {
@@ -69,5 +70,14 @@ public class CharacterMovement : MonoBehaviour
         transform.position += new Vector3(0, name.y * deltaTime, 0);
 
         
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Coin(Clone)")
+        {
+            Destroy(other.gameObject);
+            Coins++;
+        }
     }
 }
