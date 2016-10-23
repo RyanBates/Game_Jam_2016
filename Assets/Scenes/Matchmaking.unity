@@ -412,6 +412,7 @@ MonoBehaviour:
   Players: 0
   Seconds: 30
   Coins: 5
+  PlayerCoins: []
 --- !u!4 &225089794
 Transform:
   m_ObjectHideFlags: 0
@@ -459,8 +460,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30, y: -130}
-  m_SizeDelta: {x: 280, y: -320}
+  m_AnchoredPosition: {x: -30, y: -75}
+  m_SizeDelta: {x: 280, y: -210.00002}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &379675503
 MonoBehaviour:
@@ -1855,8 +1856,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -155, y: -129.99998}
-  m_SizeDelta: {x: -370, y: -320.00003}
+  m_AnchoredPosition: {x: -155, y: -74.99998}
+  m_SizeDelta: {x: -370, y: -210.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185485260
 MonoBehaviour:
@@ -2430,7 +2431,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: -60, y: 230}
+  m_SizeDelta: {x: -60, y: 127.2}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1963839741
 MonoBehaviour:
