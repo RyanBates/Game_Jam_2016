@@ -22,7 +22,7 @@ GameObject:
   - 54: {fileID: 54000010950468886}
   - 135: {fileID: 135000012403880658}
   - 114: {fileID: 114000011476362558}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Fist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012260409560}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LeftToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012556080704}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: RightHip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - 95: {fileID: 95000011649119186}
   - 54: {fileID: 54000013596442584}
   - 114: {fileID: 114000011328288302}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: GladiatorV004 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012217112000}
   - 137: {fileID: 137000012060739258}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ArmV003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013452018488}
   - 137: {fileID: 137000012757913668}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: WristPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011153109268}
   - 137: {fileID: 137000012567935034}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ElbowTricepPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012875805200}
   - 137: {fileID: 137000013550153276}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: FistPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013662867952}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010750637156}
   - 137: {fileID: 137000013670222790}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: DeltoidPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010362894294}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LeftAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011370851040}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: RightKnee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014020105508}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011405477860}
   - 137: {fileID: 137000012507847102}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: TricepPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011506525876}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LeftHip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - 54: {fileID: 54000014151844908}
   - 136: {fileID: 136000011426246930}
   - 59: {fileID: 59000010868310040}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Elbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - 54: {fileID: 54000012278177496}
   - 136: {fileID: 136000011492072500}
   - 59: {fileID: 59000011068771756}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: SHOULDER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - 4: {fileID: 4000012667787228}
   - 54: {fileID: 54000012422633662}
   - 144: {fileID: 144000013530305138}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ShoulderBLADE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013056457504}
   - 137: {fileID: 137000011597422788}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ElbowPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011111003346}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: RightAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014163491480}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011942557148}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LeftKnee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012513044472}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: RightToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011482358938}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: UpperSpine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - 4: {fileID: 4000010420247012}
   - 137: {fileID: 137000010746324238}
   - 64: {fileID: 64000011873200760}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: GladiatorV004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013747177342}
   - 54: {fileID: 54000013354327680}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: CenterSpine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011842575092}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: MotherJoint_Hip_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013947916894}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Arm 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,11 +1040,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38378f8fee1896947bad01b7b64db8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
+  cSound: {fileID: 0}
+  hSound: {fileID: 0}
+  flySound: {fileID: 0}
+  Coin: {fileID: 0}
   map: {fileID: 100000, guid: 0c490de3c29673a419b8923eb2fa0f88, type: 3}
+  player: 2
   speed: 10
-  jumpforce: 25000
-  grounded: 1
   Coins: 0
 --- !u!114 &114000011476362558
 MonoBehaviour:
