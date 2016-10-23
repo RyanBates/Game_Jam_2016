@@ -5,91 +5,86 @@ using System;
 
 public class CharacterMovement : MonoBehaviour
 {
-
-    //AudioSource jSound;
-    //AudioSource cSound;
-   
-
-    public AudioSource jSound;
     public AudioSource cSound;
     public AudioSource hSound;
-    
+    public AudioSource flySound;
+    public GameObject Coin;
 
     public GameObject map;
 
-    float damage;
-    float hitSpeed;
-
-
+    bool isFly = false;
+    
     float currentTime = 0;
     float previousTime = 0;
     float deltaTime = 0;
     public float speed;
-    Vector3 dir;
     float Jump;
     float jumpforce = 25000;
     bool grounded = true;
-    public int Coins = 0;
+    public int Coins = 5;
+    Vector3 dir = Vector3.zero;
+    Vector3 fly;
 
     float h;
     float v;
+
+
 
     public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name == "Coin(Clone)")
         {
-                Destroy(other.gameObject);
-                Coins++;
-                cSound.Play();
-            
+            Destroy(other.gameObject);
+            Coins++;
+            cSound.Play();
         }
 
-       if (transform.position == other.transform.position)
+        if (other.gameObject.name == "Fist")
+        {
+            
             hSound.Play();
-        
+            if (Coins > 0)
+            {
+                Instantiate(Coin, other.transform.position + new Vector3(5, 5, 5), other.transform.localRotation);
+            }
+            Coins--;
+            if (Coins <= 0)
+            {
+                fly = new Vector3(2000, 2000, 2000);
+                isFly = true;
+                flySound.Play();
+            }
+        }
     }
+    
+    
 
-    void Update()
+void Update()
     {
 
 
-        currentTime = Time.time;
-        deltaTime = currentTime - previousTime;
-        previousTime = currentTime;
-
+        dir = Vector3.zero;
         h = Input.GetAxis("MoveX");
         v = Input.GetAxis("MoveZ");
 
-        dir += (new Vector3(h, 0, v) / 25);
-        Vector3 pos = transform.position;
+
+        dir += (new Vector3(h, 0, v) * 2);
+
 
         //int biggestnum = (a > b) ? a : b;
-        Vector3 vel = (pos - transform.position) * Time.deltaTime;
 
 
 
-        transform.position += Vector3.ClampMagnitude(((dir + vel) * speed * Time.deltaTime), 0.4f);
+        transform.position += Vector3.ClampMagnitude(((fly +dir) * speed * Time.deltaTime), 1.0f);
+        transform.LookAt(transform.position + dir);
 
 
-        if (transform.position.y - 1.5f >= map.transform.position.y)
-            grounded = false;
-
-        else
-            grounded = true;
-
-        if (!grounded)
-            Jump /= (jumpforce * deltaTime) * 10;
-
-        else
-            if (Input.GetKeyDown(KeyCode.Space))
+        if(transform.position.x >= 100 && transform.position.z >= 100)
         {
-            Jump += jumpforce * deltaTime;
-            jSound.Play();
+            isFly = false;
+            fly = Vector3.zero;
+            transform.position = new Vector3(3,1,3);
         }
-
-        Vector3 name = new Vector3(0, Jump, 0);
-        transform.position += new Vector3(0, name.y * deltaTime, 0);
-
 
     }
 
