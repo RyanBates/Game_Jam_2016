@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
 
     
     float Jump;
-    float jumpforce = 25000;
+    float jumpforce = 25;
     //float gravity = 14;
     public bool grounded = true;
 
