@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CameraBehavior : MonoBehaviour
 {
     public float m_DampTime = 0.2f;                 // Approximate time for the camera to refocus.
     public float m_ScreenEdgeBuffer = 4f;           // Space between the top/bottom most target and the screen edge.
     public float m_MinSize = 6.5f;                  // The smallest orthographic size the camera can be.
+
+
     public Transform[] m_Targets; // All the targets the camera needs to encompass.
 
 
@@ -19,7 +20,10 @@ public class CameraBehavior : MonoBehaviour
     {
         m_Camera = GetComponentInChildren<Camera>();
     }
-
+    void start()
+    {
+        //m_Targets = GetComponent<>
+    }
 
     private void FixedUpdate()
     {
@@ -128,36 +132,3 @@ public class CameraBehavior : MonoBehaviour
         m_Camera.orthographicSize = FindRequiredSize();
     }
 }
-
-
-
-
-
-
-//using UnityEngine;
-//using System.Collections;
-
-//public class CameraBehavior : MonoBehaviour {
-//        float zoomBoundary = 15;
-//        float zoom = 13;
-//        GameObject player;
-//        GameObject mainCamera;
-//        float defZoom;
-//	// Use this for initialization
-//	void Start () {
-//	    defZoom = mainCamera.GetComponent(CameraScrolling).distance;
-//	}
-
-//	// Update is called once per frame
-//	void Update () {
-
-//        if (player.transform.position.x < zoomBoundary)
-//        {
-//            mainCamera.GetComponent(CameraScrolling).distance = zoom + ((defZoom - zoom) * (player.transform.position.x - transform.position.x) / (zoomBoundary - transform.position.x));
-//        }
-//        else
-//        { 
-//            mainCamera.GetComponent(CameraScrolling).distance = defZoom;
-//        }
-//    }
-//}
