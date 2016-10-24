@@ -515,11 +515,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013691149578, guid: f964388b3bc142d419392c618fe9d0e8,
-        type: 2}
-      propertyPath: Coins
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f964388b3bc142d419392c618fe9d0e8, type: 2}
   m_IsPrefabParent: 0
@@ -645,11 +640,6 @@ Prefab:
     - target: {fileID: 4000013132438582, guid: 97e772f6d9aae2342b9eafb64119672c, type: 2}
       propertyPath: m_RootOrder
       value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011328288302, guid: 97e772f6d9aae2342b9eafb64119672c,
-        type: 2}
-      propertyPath: Coins
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97e772f6d9aae2342b9eafb64119672c, type: 2}
@@ -824,11 +814,6 @@ Prefab:
     - target: {fileID: 4000011804505176, guid: 82714c8706b2918419ed56c70c688061, type: 2}
       propertyPath: m_RootOrder
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013332939096, guid: 82714c8706b2918419ed56c70c688061,
-        type: 2}
-      propertyPath: Coins
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82714c8706b2918419ed56c70c688061, type: 2}
@@ -1548,11 +1533,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 368811864}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 221.97}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1226408996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2336,11 +2321,6 @@ Prefab:
     - target: {fileID: 4000011486992594, guid: ed6d0915ebcb16d4297f79173c70bd15, type: 2}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012510581596, guid: ed6d0915ebcb16d4297f79173c70bd15,
-        type: 2}
-      propertyPath: Coins
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed6d0915ebcb16d4297f79173c70bd15, type: 2}

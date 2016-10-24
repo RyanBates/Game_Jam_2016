@@ -13,7 +13,9 @@ public class CharacterMovement : MonoBehaviour
     public GameObject map;
 
     bool isFly = false;
-    
+
+    public int player;
+
     float currentTime = 0;
     float previousTime = 0;
     float deltaTime = 0;
@@ -57,15 +59,59 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
-    
+    void Start()
+    {
+        if (gameObject.name == "GladiatorV004 1")
+        {
+            h = Input.GetAxis("MoveX");
+            v = Input.GetAxis("MoveZ");
+        }
+        if (gameObject.name == "GladiatorV004 2")
+        {
+            h = Input.GetAxis("MoveX2");
+            v = Input.GetAxis("MoveZ2");
+        }
+        if (gameObject.name == "GladiatorV004 3")
+        {
+            h = Input.GetAxis("MoveX3");
+            v = Input.GetAxis("MoveZ3");
+        }
+        if (gameObject.name == "GladiatorV004 4")
+        {
+            h = Input.GetAxis("MoveX4");
+            v = Input.GetAxis("MoveZ4");
+        }
+
+    }
 
 void Update()
     {
 
 
         dir = Vector3.zero;
-        h = Input.GetAxis("MoveX");
-        v = Input.GetAxis("MoveZ");
+
+
+
+        if (gameObject.name == "GladiatorV004 1")
+        {
+            h = Input.GetAxis("MoveX");
+            v = Input.GetAxis("MoveZ");
+        }
+        if (gameObject.name == "GladiatorV004 2")
+        {
+            h = Input.GetAxis("MoveX2");
+            v = Input.GetAxis("MoveZ2");
+        }
+        if (gameObject.name == "GladiatorV004 3")
+        {
+            h = Input.GetAxis("MoveX3");
+            v = Input.GetAxis("MoveZ3");
+        }
+        if (gameObject.name == "GladiatorV004 4")
+        {
+            h = Input.GetAxis("MoveX4");
+            v = Input.GetAxis("MoveZ4");
+        }
 
 
         dir += (new Vector3(h, 0, v) * 2);
